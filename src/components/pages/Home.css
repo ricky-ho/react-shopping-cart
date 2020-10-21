@@ -1,0 +1,63 @@
+.home-container {
+  width: 100%;
+  text-align: center;
+}
+
+.home-video-container {
+  margin: 25px auto;
+  height: 500px;
+}
+
+.home-video-container > video {
+  width: 100%;
+  height: 100%;
+}
+
+.home-text-container {
+  width: 100%;
+  height: 150px;
+  text-align: center;
+  padding: 25px 0;
+  color: #fff;
+  background: #596c5a;
+}
+
+.home-text-med {
+  font-size: 2rem;
+  margin: 0 125px;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.home-text-sm {
+  font-size: 1.45rem;
+  margin: 0 40px;
+  font-weight: bold;
+  line-height: 1.6;
+  letter-spacing: 1px;
+}
+
+.home-text-menu {
+  font-size: 2.5rem;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.gallery {
+  margin: 100px;
+}
+
+.gallery-item {
+  height: 100%;
+  margin: 10px;
+}
+
+.gallery-item > img {
+  width: 100%;
+  height: 100%;
+}
+
+.menu-link {
+  padding: 20px;
+}

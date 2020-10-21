@@ -1,0 +1,132 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  position: relative;
+  height: 90%;
+  width: 550px;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.modal-actions {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100px;
+  width: 100%;
+  border-top: 1px solid #c1c1c1;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+.close > .fa {
+  color: #6d6d6d;
+}
+
+.close > .fa:hover {
+  cursor: pointer;
+  color: #3f3f3f;
+}
+
+.item-information {
+  height: 100%;
+}
+
+.item-information > img {
+  width: 100%;
+}
+
+.quantity-form {
+  width: 125px;
+  margin: 15px;
+  border: 1px solid #a1a1a1;
+}
+
+.quantity-form > .btn {
+  width: 100%;
+  font-size: 2rem;
+  text-align: center;
+  border: none;
+  border-radius: 0;
+  background: #fff;
+  color: #c1c1c1;
+}
+
+.quantity-form > .btn:focus {
+  outline: none;
+}
+
+.quantity-form > .btn:hover {
+  cursor: pointer;
+  color: #3f3f3f;
+  background: #e4e4e4;
+}
+
+.quantity-form > .quantity-container {
+  text-align: center;
+  width: 50px;
+}
+
+.quantity-form > .quantity-container > input {
+  width: 40px;
+  height: 100%;
+  border: none;
+  font-family: arial;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.quantity-form > .quantity-container > input:focus {
+  outline: none;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.add-to-cart-form {
+  width: 100%;
+  margin: 15px 15px 15px 0px;
+  background: red;
+}
+
+.add-to-cart-container {
+  width: 100%;
+  height: 100%;
+  background: yellow;
+}
+
+.add-to-cart-container > .add-to-cart-btn {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  background: #7a9c7c;
+}
+
+.add-to-cart-container > .add-to-cart-btn:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+.add-to-cart-container > .add-to-cart-btn:focus {
+  outline: none;
+}

@@ -1,0 +1,29 @@
+.menu-container {
+  margin: 50px 55px;
+}
+
+.menu {
+  width: 100%;
+}
+
+.menu-item {
+  width: 225px;
+}
+
+.menu-item > img {
+  width: 100%;
+}
+
+.menu-item > img:hover {
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.menu-item-description {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.menu-item-name {
+  padding: 5px;
+}
