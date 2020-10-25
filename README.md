@@ -8,9 +8,9 @@ This shopping cart project was designed using [https://www.omomoteashoppe.com/](
 
 This shopping cart project was created using ReactJS and create-react-app. It allows users to browse a menu of drinks, add the items to a cart, and view/remove the items from the cart. The application is also mobile responsive.
 
-## ![screenshot of the menu](./components/images/ss_menu.png)
+## ![screenshot of the menu](./src/images/ss_menu.png)
 
-## ![screenshot of the cart](./components/images/ss_cart.png)
+## ![screenshot of the cart](./src/images/ss_cart.png)
 
 ## Dependencies
 
