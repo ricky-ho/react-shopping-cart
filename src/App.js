@@ -46,7 +46,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ScrollToTop />
       <Navbar smallDisplay={smallDisplay} />
       <Switch>
