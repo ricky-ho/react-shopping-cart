@@ -1,21 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import { HomeMenuData } from "./MenuData";
-import OmomoVideo from "../../videos/omomo.mp4";
+import { HomeMenuData } from "../../Data";
+import OmomoVideo from "../../../videos/omomo.mp4";
 import "./Home.css";
 
-function Home() {
-  const [smallDisplay, setsmallDisplay] = useState(window.innerWidth < 900);
-
-  const updateDisplay = () => {
-    setsmallDisplay(window.innerWidth < 900);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateDisplay);
-    return () => window.removeEventListener("resize", updateDisplay);
-  });
-
+function Home({ smallDisplay }) {
   return (
     <>
       <div className="home-container center-items flex-col">

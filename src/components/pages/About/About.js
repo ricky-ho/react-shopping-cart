@@ -1,19 +1,9 @@
-import React, { useState, useEffect } from "react";
-import Banner from "../../images/banner.jpeg";
+import React, { useState } from "react";
+import Banner from "../../../images/banner.jpeg";
 import "./About.css";
 
-function About() {
-  const [smallDisplay, setsmallDisplay] = useState(window.innerWidth < 900);
+function About({ smallDisplay }) {
   const [loadedImage, setloadedImage] = useState(false);
-
-  const updateDisplay = () => {
-    setsmallDisplay(window.innerWidth < 900);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateDisplay);
-    return () => window.removeEventListener("resize", updateDisplay);
-  });
 
   return (
     <div className="about-content">

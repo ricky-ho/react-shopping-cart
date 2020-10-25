@@ -1,20 +1,9 @@
-import React, { useState, useEffect } from "react";
-import FooterLogo from "../images/omomo-footer-logo.svg";
-import "../../node_modules/font-awesome/css/font-awesome.min.css";
+import React from "react";
+import FooterLogo from "../../images/omomo-footer-logo.svg";
+import "../../../node_modules/font-awesome/css/font-awesome.min.css";
 import "./Footer.css";
 
-function Footer() {
-  const [smallDisplay, setsmallDisplay] = useState(window.innerWidth < 800);
-
-  const updateDisplay = () => {
-    setsmallDisplay(window.innerWidth < 800);
-  };
-
-  useEffect(() => {
-    window.addEventListener("resize", updateDisplay);
-    return () => window.removeEventListener("resize", updateDisplay);
-  });
-
+function Footer({ smallDisplay }) {
   return (
     <footer>
       <div className="footer-container flex-col">

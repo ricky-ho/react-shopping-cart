@@ -9,6 +9,7 @@ footer {
 }
 
 .footer-logo {
+  box-sizing: unset;
   padding: 50px 20px;
   height: 75px;
 }

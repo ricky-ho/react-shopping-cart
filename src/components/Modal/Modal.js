@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
-import "./PopUp.css";
+import React, { useState, useEffect, useRef } from "react";
+import "./Modal.css";
 
-function PopUp(props) {
+function PopUp({ item, toggleModal, addToCart }) {
+  const modalRef = useRef();
   const [quantity, setQuantity] = useState(1);
 
   useEffect(() => {
@@ -19,16 +20,30 @@ function PopUp(props) {
     setQuantity(quantity - 1);
   };
 
+  const closeModal = (e) => {
+    if (modalRef.current === e.target) {
+      toggleModal();
+    }
+  };
+
   return (
-    <div className="modal flex center-items">
+    <div
+      ref={modalRef}
+      onClick={closeModal}
+      className="modal flex center-items"
+    >
       <div className="modal-content">
-        <div className="close" onClick={() => props.toggle()}>
+        <div className="close" onClick={() => toggleModal()}>
           <i className="fa fa-times" style={{ fontSize: "30px" }}></i>
         </div>
         <div className="item-information flex">
-          {props.item ? (
-            <img src={props.item.src} alt={props.item.alt}></img>
-          ) : null}
+          {item.imgPath ? (
+            <img src={item.imgPath} alt={item.name}></img>
+          ) : (
+            <div className="load-image-failed flex center-items">
+              Image could not be displayed
+            </div>
+          )}
         </div>
         <div className="modal-actions flex">
           <form className="quantity-form flex">
@@ -63,7 +78,14 @@ function PopUp(props) {
           </form>
           <form className="add-to-cart-form">
             <div className="add-to-cart-container">
-              <button type="button" className="add-to-cart-btn">
+              <button
+                type="button"
+                className="add-to-cart-btn"
+                onClick={() => {
+                  toggleModal();
+                  addToCart(item, quantity);
+                }}
+              >
                 Add to Cart
               </button>
             </div>

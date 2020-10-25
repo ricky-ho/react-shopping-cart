@@ -19,9 +19,9 @@ function MenuItem({ item, toggle, handleClick }) {
       <img
         src={item.imgPath}
         alt={item.name}
-        onClick={(e) => {
+        onClick={() => {
           toggle();
-          handleClick(e);
+          handleClick(item);
         }}
       />
       <div className="menu-item-description comm-text">
