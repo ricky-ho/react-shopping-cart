@@ -2,7 +2,7 @@
 
 ## Important Note:
 
-This shopping cart project was designed using [https://www.omomoteashoppe.com/]() as inspiration. All of the images and major designs were replicated from their official site. All copyright goes to OMOMO Tea Shoppe. This project is only for my personal educational purposes.
+This shopping cart project was designed using [https://www.omomoteashoppe.com/](https://www.omomoteashoppe.com/) as inspiration. All of the images and major designs were replicated from their official site. All copyright goes to OMOMO Tea Shoppe. This project is only for my personal educational purposes.
 
 ## Description
 
