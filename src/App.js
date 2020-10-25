@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Switch, Route } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar.js";
 import Footer from "./components/Footer/Footer.js";
 import Home from "./components/pages/Home/Home.js";
@@ -46,7 +46,7 @@ function App() {
   };
 
   return (
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <>
       <ScrollToTop />
       <Navbar smallDisplay={smallDisplay} />
       <Switch>
@@ -77,7 +77,7 @@ function App() {
         />
       </Switch>
       <Footer smallDisplay={smallDisplay} />
-    </BrowserRouter>
+    </>
   );
 }
 
