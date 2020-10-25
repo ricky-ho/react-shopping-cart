@@ -10,16 +10,18 @@ import ScrollToTop from "./components/pages/ScrollToTop";
 import "./App.css";
 
 function App() {
+  /* Display */
   const [smallDisplay, setsmallDisplay] = useState(window.innerWidth < 800);
-
   const updateDisplay = () => setsmallDisplay(window.innerWidth < 800);
-
   useEffect(() => {
     window.addEventListener("resize", updateDisplay);
     return () => window.removeEventListener("resize", updateDisplay);
   });
 
+  /* Cart Functionality */
   const [cartItems, setCartItems] = useState([]);
+  const [totalItems, setTotalItems] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
 
   const addToCart = (item, quantity) => {
     const _cartItems = [...cartItems];
@@ -37,12 +39,27 @@ function App() {
     if (!inCart) {
       _cartItems.push({ ...item, count: quantity });
     }
-    setCartItems([..._cartItems]);
+    calculateTotals(_cartItems);
+    setCartItems(_cartItems);
   };
 
   const removeCartItem = (item) => {
-    const _cartItems = [...cartItems];
-    setCartItems(_cartItems.filter((cartItem) => cartItem.id !== item.id));
+    const _cartItems = [...cartItems].filter(
+      (cartItem) => cartItem.id !== item.id
+    );
+    calculateTotals(_cartItems);
+    setCartItems(_cartItems);
+  };
+
+  const calculateTotals = (cartItems) => {
+    let runningPrice = 0;
+    let runningItems = 0;
+    cartItems.forEach((item) => {
+      runningPrice += item.count * item.price;
+      runningItems += item.count;
+    });
+    setTotalItems(runningItems);
+    setTotalPrice(runningPrice);
   };
 
   return (
@@ -72,6 +89,8 @@ function App() {
               smallDisplay={smallDisplay}
               cartItems={cartItems}
               removeCartItem={removeCartItem}
+              totalItems={totalItems}
+              totalPrice={totalPrice}
             />
           )}
         />

@@ -1,27 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./Cart.css";
 
-function Cart({ smallDisplay, cartItems, removeCartItem }) {
-  const [totalItems, setTotalItems] = useState(0);
-  const [totalPrice, setTotalPrice] = useState(0);
-
-  const calculateTotals = () => {
-    let runningPrice = totalPrice;
-    let runningItems = totalItems;
-    cartItems.forEach((item) => {
-      let count = item.count;
-      let price = item.price;
-      runningPrice += count * price;
-      runningItems += count;
-    });
-    setTotalItems(runningItems);
-    setTotalPrice(runningPrice);
-  };
-
-  useEffect(() => {
-    calculateTotals();
-  }, []);
-
+function Cart({
+  smallDisplay,
+  cartItems,
+  removeCartItem,
+  totalItems,
+  totalPrice,
+}) {
   return (
     <div className="cart-container flex">
       <div className="cart-display flex-col">
@@ -48,7 +34,9 @@ function Cart({ smallDisplay, cartItems, removeCartItem }) {
                 </div>
                 <div
                   className="cart-item-remove flex"
-                  onClick={() => removeCartItem(item)}
+                  onClick={() => {
+                    removeCartItem(item);
+                  }}
                 >
                   <i
                     className="fa fa-minus"
