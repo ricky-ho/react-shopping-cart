@@ -16,3 +16,4 @@ This shopping cart project was created using ReactJS and create-react-app. It al
 
 - create-react-app
 - react-router-dom
+- font-awesome

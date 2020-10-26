@@ -9,12 +9,43 @@ function Cart({
   totalPrice,
 }) {
   return (
-    <div className="cart-container flex">
-      <div className="cart-display flex-col">
+    <div
+      className={`cart-container ${
+        smallDisplay ? "flex-col align-center" : "flex"
+      }`}
+    >
+      {smallDisplay ? (
+        <div className="cart-summary-small comm-text flex-col">
+          <h2 className="cart-summary-title">Order Summary</h2>
+          <div className="total-items flex">
+            <p>Total Drinks:</p>
+            <p>{`${totalItems}`}</p>
+          </div>
+          <div className="total-price flex">
+            <p>Total: </p>
+            <p>{`$${totalPrice}`}</p>
+          </div>
+          {totalItems === 0 ? null : (
+            <button type="button" className="checkout">
+              Checkout
+            </button>
+          )}
+        </div>
+      ) : null}
+      <div
+        className={`${
+          smallDisplay ? "cart-display-small" : "cart-display"
+        } flex-col`}
+      >
         {cartItems.length > 0 ? (
           cartItems.map((item) => {
             return (
-              <div className="cart-item flex" key={item.id}>
+              <div
+                className={`${
+                  smallDisplay ? "cart-item-small" : "cart-item"
+                } flex`}
+                key={item.id}
+              >
                 <div className="cart-item-image-container">
                   <img src={item.imgPath} alt={item.name} />
                 </div>
@@ -48,26 +79,30 @@ function Cart({
           })
         ) : (
           <div className="cart-container flex">
-            <p className="empty-cart-message">Your cart is empty</p>
+            <div className="empty-cart-message margin-bot-25">
+              Your cart is empty
+            </div>
           </div>
         )}
       </div>
-      <div className="cart-summary comm-text flex-col">
-        <h2>Order Summary</h2>
-        <div className="total-items flex">
-          <p>Total Drinks:</p>
-          <p>{`${totalItems}`}</p>
+      {smallDisplay ? null : (
+        <div className="cart-summary comm-text flex-col">
+          <h2 className="cart-summary-title">Order Summary</h2>
+          <div className="total-items flex">
+            <p>Total Drinks:</p>
+            <p>{`${totalItems}`}</p>
+          </div>
+          <div className="total-price flex">
+            <p>Total: </p>
+            <p>{`$${totalPrice}`}</p>
+          </div>
+          {totalItems === 0 ? null : (
+            <button type="button" className="checkout">
+              Checkout
+            </button>
+          )}
         </div>
-        <div className="total-price flex">
-          <p>Total: </p>
-          <p>{`$${totalPrice}`}</p>
-        </div>
-        {totalItems === 0 ? null : (
-          <button type="button" className="checkout">
-            Checkout
-          </button>
-        )}
-      </div>
+      )}
     </div>
   );
 }
