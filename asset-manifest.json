@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/react-shopping-cart/static/css/main.c755b202.chunk.css",
-    "main.js": "/react-shopping-cart/static/js/main.3228d975.chunk.js",
-    "main.js.map": "/react-shopping-cart/static/js/main.3228d975.chunk.js.map",
+    "main.css": "/react-shopping-cart/static/css/main.18bb4931.chunk.css",
+    "main.js": "/react-shopping-cart/static/js/main.6d04c50a.chunk.js",
+    "main.js.map": "/react-shopping-cart/static/js/main.6d04c50a.chunk.js.map",
     "runtime-main.js": "/react-shopping-cart/static/js/runtime-main.fa03f73f.js",
     "runtime-main.js.map": "/react-shopping-cart/static/js/runtime-main.fa03f73f.js.map",
     "static/css/2.63e57482.chunk.css": "/react-shopping-cart/static/css/2.63e57482.chunk.css",
-    "static/js/2.bd253249.chunk.js": "/react-shopping-cart/static/js/2.bd253249.chunk.js",
-    "static/js/2.bd253249.chunk.js.map": "/react-shopping-cart/static/js/2.bd253249.chunk.js.map",
+    "static/js/2.a6ee6adc.chunk.js": "/react-shopping-cart/static/js/2.a6ee6adc.chunk.js",
+    "static/js/2.a6ee6adc.chunk.js.map": "/react-shopping-cart/static/js/2.a6ee6adc.chunk.js.map",
     "index.html": "/react-shopping-cart/index.html",
     "static/css/2.63e57482.chunk.css.map": "/react-shopping-cart/static/css/2.63e57482.chunk.css.map",
-    "static/css/main.c755b202.chunk.css.map": "/react-shopping-cart/static/css/main.c755b202.chunk.css.map",
-    "static/js/2.bd253249.chunk.js.LICENSE.txt": "/react-shopping-cart/static/js/2.bd253249.chunk.js.LICENSE.txt",
+    "static/css/main.18bb4931.chunk.css.map": "/react-shopping-cart/static/css/main.18bb4931.chunk.css.map",
+    "static/js/2.a6ee6adc.chunk.js.LICENSE.txt": "/react-shopping-cart/static/js/2.a6ee6adc.chunk.js.LICENSE.txt",
     "static/media/Cafe_Latte-500.a0b391d5.jpeg": "/react-shopping-cart/static/media/Cafe_Latte-500.a0b391d5.jpeg",
     "static/media/Camo_Thai_menu.5733960d.jpg": "/react-shopping-cart/static/media/Camo_Thai_menu.5733960d.jpg",
     "static/media/Four_Seasons-500.47bd6c09.jpeg": "/react-shopping-cart/static/media/Four_Seasons-500.47bd6c09.jpeg",
@@ -32,8 +32,8 @@
   "entrypoints": [
     "static/js/runtime-main.fa03f73f.js",
     "static/css/2.63e57482.chunk.css",
-    "static/js/2.bd253249.chunk.js",
-    "static/css/main.c755b202.chunk.css",
-    "static/js/main.3228d975.chunk.js"
+    "static/js/2.a6ee6adc.chunk.js",
+    "static/css/main.18bb4931.chunk.css",
+    "static/js/main.6d04c50a.chunk.js"
   ]
 }
