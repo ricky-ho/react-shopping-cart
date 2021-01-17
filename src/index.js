@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import App from "./App";
 
 ReactDOM.render(
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
+  <BrowserRouter basename={"/shopping-cart"}>
     <App />
   </BrowserRouter>,
   document.getElementById("root")
