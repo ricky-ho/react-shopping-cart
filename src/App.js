@@ -11,8 +11,8 @@ import "./App.css";
 
 function App() {
   /* Display */
-  const [smallDisplay, setsmallDisplay] = useState(window.innerWidth < 800);
-  const updateDisplay = () => setsmallDisplay(window.innerWidth < 800);
+  const [smallDisplay, setsmallDisplay] = useState(window.innerWidth < 850);
+  const updateDisplay = () => setsmallDisplay(window.innerWidth < 850);
   useEffect(() => {
     window.addEventListener("resize", updateDisplay);
     return () => window.removeEventListener("resize", updateDisplay);
@@ -43,12 +43,23 @@ function App() {
     setCartItems(_cartItems);
   };
 
-  const removeCartItem = (item) => {
-    const _cartItems = [...cartItems].filter(
-      (cartItem) => cartItem.id !== item.id
-    );
+  const decrementItemQuantity = (item) => {
+    item.count -= 1;
+    let _cartItems = [...cartItems];
+    if (item.count === 0) {
+      _cartItems = [...cartItems].filter((cartItem) => cartItem.id !== item.id);
+    }
     calculateTotals(_cartItems);
     setCartItems(_cartItems);
+  };
+
+  const incrementItemQuantity = (item) => {
+    if (item.count < 10) {
+      item.count += 1;
+      let _cartItems = [...cartItems];
+      calculateTotals(_cartItems);
+      setCartItems(_cartItems);
+    }
   };
 
   const calculateTotals = (cartItems) => {
@@ -63,7 +74,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className="app-wrapper">
       <ScrollToTop />
       <Navbar smallDisplay={smallDisplay} />
       <Switch>
@@ -88,7 +99,8 @@ function App() {
             <Cart
               smallDisplay={smallDisplay}
               cartItems={cartItems}
-              removeCartItem={removeCartItem}
+              decrementItemQuantity={decrementItemQuantity}
+              incrementItemQuantity={incrementItemQuantity}
               totalItems={totalItems}
               totalPrice={totalPrice}
             />
@@ -96,7 +108,7 @@ function App() {
         />
       </Switch>
       <Footer smallDisplay={smallDisplay} />
-    </>
+    </div>
   );
 }
 

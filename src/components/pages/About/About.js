@@ -6,7 +6,7 @@ function About({ smallDisplay }) {
   const [loadedImage, setloadedImage] = useState(false);
 
   return (
-    <div className="about-content">
+    <div className="about-content flex-col">
       <div className="banner">
         <img
           src={Banner}

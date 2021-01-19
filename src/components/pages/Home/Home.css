@@ -6,6 +6,7 @@
 .home-video-container {
   margin: 25px auto;
   height: 500px;
+  max-width: 1400px;
 }
 
 .home-video-container > video {
@@ -24,6 +25,7 @@
 }
 
 .home-text-med {
+  max-width: 1400px;
   font-size: 2rem;
   margin: 0 125px;
   font-weight: bold;
@@ -43,10 +45,12 @@
   font-size: 2.5rem;
   font-weight: bold;
   letter-spacing: 3px;
+  max-width: 1400px;
 }
 
 .gallery {
   margin: 100px;
+  max-width: 1400px;
 }
 
 .gallery-item {

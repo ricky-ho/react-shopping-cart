@@ -1,10 +1,13 @@
-import React, { useEffect } from "react";
+import React from "react";
+import CartSummary from "./CartSummary";
+import CartItems from "./CartItems";
 import "./Cart.css";
 
 function Cart({
   smallDisplay,
   cartItems,
-  removeCartItem,
+  decrementItemQuantity,
+  incrementItemQuantity,
   totalItems,
   totalPrice,
 }) {
@@ -14,95 +17,24 @@ function Cart({
         smallDisplay ? "flex-col align-center" : "flex"
       }`}
     >
-      {smallDisplay ? (
-        <div className="cart-summary-small comm-text flex-col">
-          <h2 className="cart-summary-title">Order Summary</h2>
-          <div className="total-items flex">
-            <p>Total Drinks:</p>
-            <p>{`${totalItems}`}</p>
-          </div>
-          <div className="total-price flex">
-            <p>Total: </p>
-            <p>{`$${totalPrice}`}</p>
-          </div>
-          {totalItems === 0 ? null : (
-            <button type="button" className="checkout">
-              Checkout
-            </button>
-          )}
-        </div>
-      ) : null}
+      <CartSummary
+        smallDisplay={smallDisplay}
+        items={cartItems}
+        totalItems={totalItems}
+        totalPrice={totalPrice}
+      />
       <div
         className={`${
-          smallDisplay ? "cart-display-small" : "cart-display"
-        } flex-col`}
+          smallDisplay ? "cart-display-sm center-items" : "cart-display"
+        } flex-col align-center`}
       >
-        {cartItems.length > 0 ? (
-          cartItems.map((item) => {
-            return (
-              <div
-                className={`${
-                  smallDisplay ? "cart-item-small" : "cart-item"
-                } flex`}
-                key={item.id}
-              >
-                <div className="cart-item-image-container">
-                  <img src={item.imgPath} alt={item.name} />
-                </div>
-                <div className="cart-item-information comm-text flex-col">
-                  <div className="cart-item-name">{item.name}</div>
-                  <div className="cart-item-quantity-container flex">
-                    <input
-                      type="number"
-                      min={1}
-                      max={10}
-                      value={item.count}
-                      placeholder="Quantity"
-                      readOnly
-                    />
-                  </div>
-                  <div className="cart-item-price">{`$${item.price}`}</div>
-                </div>
-                <div
-                  className="cart-item-remove flex"
-                  onClick={() => {
-                    removeCartItem(item);
-                  }}
-                >
-                  <i
-                    className="fa fa-minus"
-                    style={{ fontSize: "20px", color: "red" }}
-                  ></i>
-                </div>
-              </div>
-            );
-          })
-        ) : (
-          <div className="cart-container flex">
-            <div className="empty-cart-message margin-bot-25">
-              Your cart is empty
-            </div>
-          </div>
-        )}
+        <CartItems
+          smallDisplay={smallDisplay}
+          items={cartItems}
+          decrementItemQuantity={decrementItemQuantity}
+          incrementItemQuantity={incrementItemQuantity}
+        />
       </div>
-      {smallDisplay ? null : (
-        <div className="cart-summary comm-text flex-col">
-          <h2 className="cart-summary-title">Order Summary</h2>
-          <div className="total-items flex">
-            <p>Total Drinks:</p>
-            <p>{`${totalItems}`}</p>
-          </div>
-          <div className="total-price flex">
-            <p>Total: </p>
-            <p>{`$${totalPrice}`}</p>
-          </div>
-          {totalItems === 0 ? null : (
-            <button type="button" className="checkout">
-              Checkout
-            </button>
-          )}
-        </div>
-      )}
     </div>
   );
 }

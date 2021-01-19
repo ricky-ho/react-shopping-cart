@@ -19,27 +19,26 @@ function Menu({ smallDisplay, addToCart }) {
 
   return (
     <div className="menu-container">
-      <div
-        className={`menu ${smallDisplay ? "flex-col center-items" : "flex"}`}
-      >
+      <div className={`flex ${smallDisplay && "flex-col center-items"}`}>
         {MenuData.map((item) => {
           return (
             <MenuItem
+              smallDisplay={smallDisplay}
               item={item}
-              toggle={toggleModal}
+              toggleModal={toggleModal}
               handleClick={clickedMenuItem}
               key={item.id}
             />
           );
         })}
       </div>
-      {showModal ? (
+      {showModal && (
         <Modal
           toggleModal={toggleModal}
           item={clickedItem}
           addToCart={addToCart}
         />
-      ) : null}
+      )}
     </div>
   );
 }

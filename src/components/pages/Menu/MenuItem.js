@@ -1,15 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
-function MenuItem({ item, toggle, handleClick }) {
-  const [smallDisplay, setsmallDisplay] = useState(window.innerWidth < 615);
-
-  const updateDisplay = () => setsmallDisplay(window.innerWidth < 615);
-
-  useEffect(() => {
-    window.addEventListener("resize", updateDisplay);
-    return () => window.removeEventListener("resize", updateDisplay);
-  });
-
+function MenuItem({ smallDisplay, item, toggleModal, handleClick }) {
   return (
     <div
       className={`menu-item ${
@@ -20,7 +11,7 @@ function MenuItem({ item, toggle, handleClick }) {
         src={item.imgPath}
         alt={item.name}
         onClick={() => {
-          toggle();
+          toggleModal();
           handleClick(item);
         }}
       />

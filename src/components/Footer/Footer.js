@@ -5,13 +5,13 @@ import "./Footer.css";
 
 function Footer({ smallDisplay }) {
   return (
-    <footer>
+    <footer className="flex-col center-items">
       <div className="footer-container flex-col">
         <div className="footer-logo flex">
           <img src={FooterLogo} alt="Omomo footer logo" />
         </div>
         <div
-          className={`footer-content-container comm-text
+          className={`comm-text margin-bot-25
             ${smallDisplay ? "flex-col" : "flex"}`}
         >
           <div
@@ -81,7 +81,8 @@ function Footer({ smallDisplay }) {
         </div>
         <div>
           <p className="copyright">
-            © Copyright OMOMO Tea Shoppe 2020. All Rights Reserved
+            All Copyrights go to © OMOMO Tea Shoppe 2020. This project is merely
+            for educational purposes.
           </p>
         </div>
       </div>

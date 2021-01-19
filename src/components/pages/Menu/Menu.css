@@ -1,9 +1,8 @@
 .menu-container {
-  margin: 50px 55px;
-}
-
-.menu {
   width: 100%;
+  max-width: 1400px;
+  margin: 50px 0;
+  padding: 0 50px;
 }
 
 .menu-item {
@@ -22,7 +21,7 @@
 }
 
 .menu-item-description {
-  font-size: 1.1rem;
+  font-size: 1rem;
   text-align: center;
 }
 
