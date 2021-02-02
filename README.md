@@ -17,9 +17,3 @@ This project was created as a front-end only project, so the data for the menu i
 ![screenshot of the menu](./src/images/ss_menu.png)
 
 ![screenshot of the cart](./src/images/ss_cart_updated.png)
-
-## Dependencies
-
-- create-react-app
-- react-router-dom
-- font-awesome
