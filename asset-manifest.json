@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/react-shopping-cart/static/css/main.2f7efa00.chunk.css",
-    "main.js": "/react-shopping-cart/static/js/main.39305719.chunk.js",
-    "main.js.map": "/react-shopping-cart/static/js/main.39305719.chunk.js.map",
+    "main.js": "/react-shopping-cart/static/js/main.3cfef81d.chunk.js",
+    "main.js.map": "/react-shopping-cart/static/js/main.3cfef81d.chunk.js.map",
     "runtime-main.js": "/react-shopping-cart/static/js/runtime-main.fa03f73f.js",
     "runtime-main.js.map": "/react-shopping-cart/static/js/runtime-main.fa03f73f.js.map",
     "static/css/2.63e57482.chunk.css": "/react-shopping-cart/static/css/2.63e57482.chunk.css",
@@ -13,15 +13,15 @@
     "static/css/main.2f7efa00.chunk.css.map": "/react-shopping-cart/static/css/main.2f7efa00.chunk.css.map",
     "static/js/2.ce1c6369.chunk.js.LICENSE.txt": "/react-shopping-cart/static/js/2.ce1c6369.chunk.js.LICENSE.txt",
     "static/media/Cafe_Latte-500.a0b391d5.jpeg": "/react-shopping-cart/static/media/Cafe_Latte-500.a0b391d5.jpeg",
-    "static/media/Camo_Thai_menu.5733960d.jpg": "/react-shopping-cart/static/media/Camo_Thai_menu.5733960d.jpg",
+    "static/media/Camo_Thai_menu.660cece7.jpg": "/react-shopping-cart/static/media/Camo_Thai_menu.660cece7.jpg",
     "static/media/Four_Seasons-500.47bd6c09.jpeg": "/react-shopping-cart/static/media/Four_Seasons-500.47bd6c09.jpeg",
     "static/media/Jasmine_C-500.2cecfa00.jpeg": "/react-shopping-cart/static/media/Jasmine_C-500.2cecfa00.jpeg",
-    "static/media/Matcha_Cortado_C_menu.e6e91d79.jpg": "/react-shopping-cart/static/media/Matcha_Cortado_C_menu.e6e91d79.jpg",
-    "static/media/Omomo_Matcha_menu.26d2f2d2.jpg": "/react-shopping-cart/static/media/Omomo_Matcha_menu.26d2f2d2.jpg",
+    "static/media/Matcha_Cortado_C_menu.f8e11894.jpg": "/react-shopping-cart/static/media/Matcha_Cortado_C_menu.f8e11894.jpg",
+    "static/media/Omomo_Matcha_menu.c4ad2d83.jpg": "/react-shopping-cart/static/media/Omomo_Matcha_menu.c4ad2d83.jpg",
     "static/media/Oreo_Brulee_GMT-500.17dd843a.jpeg": "/react-shopping-cart/static/media/Oreo_Brulee_GMT-500.17dd843a.jpeg",
-    "static/media/Oreo_Brulee_GMT_menu.7f838be1.jpg": "/react-shopping-cart/static/media/Oreo_Brulee_GMT_menu.7f838be1.jpg",
+    "static/media/Oreo_Brulee_GMT_menu.e353dc31.jpg": "/react-shopping-cart/static/media/Oreo_Brulee_GMT_menu.e353dc31.jpg",
     "static/media/Strawberry_Green_Tea-500.5814daea.jpeg": "/react-shopping-cart/static/media/Strawberry_Green_Tea-500.5814daea.jpeg",
-    "static/media/Taro_Fresh_Milk_w_Red_Bean_menu.e18da0ec.jpg": "/react-shopping-cart/static/media/Taro_Fresh_Milk_w_Red_Bean_menu.e18da0ec.jpg",
+    "static/media/Taro_Fresh_Milk_w_Red_Bean_menu.d26a2574.jpg": "/react-shopping-cart/static/media/Taro_Fresh_Milk_w_Red_Bean_menu.d26a2574.jpg",
     "static/media/Uji_GMT-500.b3ab7493.jpeg": "/react-shopping-cart/static/media/Uji_GMT-500.b3ab7493.jpeg",
     "static/media/banner.5ab1568f.jpeg": "/react-shopping-cart/static/media/banner.5ab1568f.jpeg",
     "static/media/font-awesome.min.css": "/react-shopping-cart/static/media/fontawesome-webfont.f691f37e.woff",
@@ -34,6 +34,6 @@
     "static/css/2.63e57482.chunk.css",
     "static/js/2.ce1c6369.chunk.js",
     "static/css/main.2f7efa00.chunk.css",
-    "static/js/main.39305719.chunk.js"
+    "static/js/main.3cfef81d.chunk.js"
   ]
 }
