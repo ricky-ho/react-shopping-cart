@@ -1,8 +1,14 @@
 import CamoThai_menu from "../images/menu/Camo_Thai_menu.jpg";
+import CamoThai_modal from "../images/menu/Camo_Thai_modal.jpg";
 import OmomoMatcha_menu from "../images/menu/Omomo_Matcha_menu.jpg";
+import OmomoMatcha_modal from "../images/menu/Omomo_Matcha_modal.jpg";
 import OreoBrulee_menu from "../images/menu/Oreo_Brulee_GMT_menu.jpg";
-import TaroFresh_menu from "../images/menu/Taro_Fresh_Milk_w_Red_Bean_menu.jpg";
+import OreoBrulee_modal from "../images/menu/Oreo_Brulee_GMT_modal.jpeg";
+import StrawberryT_menu from "../images/menu/Fruit_Tornado_Strawberry_menu.jpeg";
+import StrawberryT_modal from "../images/menu/Fruit_Tornado_Strawberry_modal.jpeg";
 import MatchaCortado_menu from "../images/menu/Matcha_Cortado_C_menu.jpg";
+import MatchaCortado_modal from "../images/menu/Matcha_Cortado_C_modal.jpeg";
+
 import OreoBrulee_home from "../images/menu/Oreo_Brulee_GMT-500.jpeg";
 import JasmineCreamomo_home from "../images/menu/Jasmine_C-500.jpeg";
 import UjiGMT_home from "../images/menu/Uji_GMT-500.jpeg";
@@ -16,35 +22,40 @@ export const MenuData = [
     name: "CAMO THAI",
     abbr: "CAMO THAI",
     price: 4.75,
-    imgPath: CamoThai_menu,
+    imgMenu: CamoThai_menu,
+    imgModal: CamoThai_modal,
   },
   {
     id: "d2",
     name: "OMOMO MATCHA",
     abbr: "OMOMO MATCHA",
     price: 5.5,
-    imgPath: OmomoMatcha_menu,
+    imgMenu: OmomoMatcha_menu,
+    imgModal: OmomoMatcha_modal,
   },
   {
     id: "d3",
     name: "OREO BRULEE GREEN MILK TEA",
-    abbr: "OREO BR GMT",
+    abbr: "OREO BR. GMT",
     price: 5.25,
-    imgPath: OreoBrulee_menu,
+    imgMenu: OreoBrulee_menu,
+    imgModal: OreoBrulee_modal,
   },
   {
     id: "d4",
-    name: "TARO FRESH MILK W/ RED BEAN",
-    abbr: "TARO FM W/ RB",
-    price: 4.5,
-    imgPath: TaroFresh_menu,
+    name: "FRUIT TORNADO STRAWBERRY",
+    abbr: "FRUIT T. STRWBRY",
+    price: 6.0,
+    imgMenu: StrawberryT_menu,
+    imgModal: StrawberryT_modal,
   },
   {
     id: "d5",
     name: "MATCHA CORTADO CREAMOMO",
     abbr: "MATCHA CORTADO",
     price: 5.5,
-    imgPath: MatchaCortado_menu,
+    imgMenu: MatchaCortado_menu,
+    imgModal: MatchaCortado_modal,
   },
 ];
 

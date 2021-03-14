@@ -3,12 +3,12 @@ import React from "react";
 function MenuItem({ smallDisplay, item, toggleModal, handleClick }) {
   return (
     <div
-      className={`menu-item ${
-        smallDisplay ? "margin-bot-50" : "margin-right-25 margin-bot-25"
+      className={`menu-item flex-col ${
+        smallDisplay ? "margin-bot-50" : "margin-bot-25"
       }`}
     >
       <img
-        src={item.imgPath}
+        src={item.imgMenu}
         alt={item.name}
         onClick={() => {
           toggleModal();
@@ -17,7 +17,7 @@ function MenuItem({ smallDisplay, item, toggleModal, handleClick }) {
       />
       <div className="menu-item-description comm-text">
         <p className="menu-item-name">{item.name}</p>
-        <p className="menu-item-price font-brown">{item.price}</p>
+        <p className="menu-item-price font-brown">{item.price.toFixed(2)}</p>
       </div>
     </div>
   );
