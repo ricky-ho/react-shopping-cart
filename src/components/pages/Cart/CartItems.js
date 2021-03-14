@@ -14,7 +14,7 @@ const CartItems = ({
           key={item.id}
         >
           <div className="cart-item-image-container">
-            <img src={item.imgPath} alt={item.name} />
+            <img src={item.imgMenu} alt={item.name} />
           </div>
           <div className="cart-item-info comm-text flex-col">
             <div>{item.name}</div>
@@ -28,7 +28,7 @@ const CartItems = ({
                 readOnly
               />
             </div>
-            <div className="font-brown">{`$${item.price}`}</div>
+            <div className="font-brown">{`$${item.price.toFixed(2)}`}</div>
           </div>
           <div
             className="cart-item-btn increment flex"

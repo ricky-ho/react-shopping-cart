@@ -11,7 +11,7 @@ const CartSummary = ({ smallDisplay, items, totalItems, totalPrice }) => {
       <div className="flex-col">
         {items.map((item) => {
           return (
-            <div className="flex-col">
+            <div key={item.id} className="flex-col">
               <div className="item-breakdown flex">
                 <div>{item.count} x</div>
                 <div style={{ textAlign: "left", width: "150px" }}>
@@ -25,7 +25,7 @@ const CartSummary = ({ smallDisplay, items, totalItems, totalPrice }) => {
       </div>
       <div className="flex">
         <p>SUBTOTAL: ({totalItems} items)</p>
-        <p>{`$${totalPrice}`}</p>
+        <p>{`$${totalPrice.toFixed(2)}`}</p>
       </div>
       {totalItems === 0 ? null : (
         <button type="button" className="checkout">

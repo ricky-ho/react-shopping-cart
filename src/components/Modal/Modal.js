@@ -33,29 +33,23 @@ function Modal({ smallDisplay, item, toggleModal, addToCart }) {
       className="modal flex center-items"
     >
       <div className="modal-content">
-        <div className="close-btn" onClick={() => toggleModal()}>
+        <div id="close-btn" onClick={() => toggleModal()}>
           <i className="fa fa-times" style={{ fontSize: "30px" }}></i>
         </div>
-        <div className="item-cover flex">
-          {item.imgPath ? (
-            <img src={item.imgPath} alt={item.name}></img>
-          ) : (
-            <div className="load-image-failed flex center-items">
-              Image could not be displayed
-            </div>
-          )}
+        <div id="item-cover" className="flex">
+          <img src={item.imgModal} alt={item.name}></img>
         </div>
-        <div className="modal-actions flex">
-          <div className="quantity-form flex">
+        <div id="modal-actions" className="flex">
+          <div id="quantity-form" className="flex">
             <button
               type="button"
               onClick={decrement}
-              className="btn decrement-btn"
+              className="btn"
               disabled={quantity <= 1}
             >
               -
             </button>
-            <div className="quantity-container">
+            <div id="quantity-display">
               <input
                 type="number"
                 id="quantity"
@@ -70,16 +64,15 @@ function Modal({ smallDisplay, item, toggleModal, addToCart }) {
             <button
               type="button"
               onClick={increment}
-              className="btn increment-btn"
+              className="btn"
               disabled={quantity >= 10}
             >
               +
             </button>
           </div>
-          <div className="add-to-cart">
+          <div id="add-to-cart">
             <button
               type="button"
-              className="add-to-cart-btn"
               onClick={() => {
                 toggleModal();
                 addToCart(item, quantity);
