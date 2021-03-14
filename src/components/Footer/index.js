@@ -1,7 +1,8 @@
 import React from "react";
+
 import FooterLogo from "../../images/omomo-footer-logo.svg";
-import "../../../node_modules/font-awesome/css/font-awesome.min.css";
-import "./Footer.css";
+
+import "./style.css";
 
 function Footer({ smallDisplay }) {
   return (

@@ -1,15 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { Switch, Route } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar.js";
-import Footer from "./components/Footer/Footer.js";
-import Home from "./components/pages/Home/Home.js";
-import About from "./components/pages/About/About.js";
-import Menu from "./components/pages/Menu/Menu.js";
-import Cart from "./components/pages/Cart/Cart.js";
+
+import Navbar from "./components/Navbar/";
+import Footer from "./components/Footer/";
+import Home from "./components/pages/Home/";
+import About from "./components/pages/About/";
+import Menu from "./components/pages/Menu/";
+import Cart from "./components/pages/Cart/";
 import ScrollToTop from "./components/pages/ScrollToTop";
+
+import "../node_modules/font-awesome/css/font-awesome.min.css";
 import "./App.css";
 
-function App() {
+const App = () => {
   /* Display */
   const [smallDisplay, setsmallDisplay] = useState(window.innerWidth < 850);
   const updateDisplay = () => setsmallDisplay(window.innerWidth < 850);
@@ -110,6 +113,6 @@ function App() {
       <Footer smallDisplay={smallDisplay} />
     </div>
   );
-}
+};
 
 export default App;

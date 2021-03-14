@@ -100,9 +100,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 #close-btn .fa {
-  color: #6d6d6d;
+  color: #000000;
 }
 
 #close-btn .fa:hover {
-  color: #3f3f3f;
+  color: #c50000;
 }

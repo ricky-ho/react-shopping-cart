@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
-import "./Modal.css";
+
+import "./style.css";
 
 function Modal({ smallDisplay, item, toggleModal, addToCart }) {
   const modalRef = useRef();

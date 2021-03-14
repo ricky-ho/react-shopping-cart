@@ -1,23 +1,21 @@
 import React from "react";
+import "./style.css";
 
 const CartSummary = ({ smallDisplay, items, totalItems, totalPrice }) => {
   return (
-    <div
-      className={`${
-        smallDisplay ? "cart-summary-sm" : "cart-summary"
-      } comm-text flex-col`}
+    <section
+      className="comm-text flex-col"
+      id={smallDisplay ? "cart-summary-sm" : "cart-summary"}
     >
-      <h2 className="cart-summary-title">ORDER SUMMARY</h2>
+      <h2>ORDER SUMMARY</h2>
       <div className="flex-col">
         {items.map((item) => {
           return (
             <div key={item.id} className="flex-col">
               <div className="item-breakdown flex">
                 <div>{item.count} x</div>
-                <div style={{ textAlign: "left", width: "150px" }}>
-                  {item.abbr}
-                </div>
-                <div>${(item.count * item.price).toFixed(2)}</div>
+                <div>{item.abbr}</div>
+                <div>{`$${(item.count * item.price).toFixed(2)}`}</div>
               </div>
             </div>
           );
@@ -32,7 +30,7 @@ const CartSummary = ({ smallDisplay, items, totalItems, totalPrice }) => {
           PLACE ORDER
         </button>
       )}
-    </div>
+    </section>
   );
 };
 

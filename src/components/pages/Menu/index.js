@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Modal from "../../Modal/Modal.js";
-import MenuItem from "./MenuItem";
+import Modal from "../../Modal/";
+import MenuItem from "./MenuItem/";
 import { MenuData } from "../../Data";
-import "./Menu.css";
+import "./style.css";
 
-function Menu({ smallDisplay, addToCart }) {
+const Menu = ({ smallDisplay, addToCart }) => {
   const [showModal, setshowModal] = useState(false);
 
   const toggleModal = () => {
@@ -18,8 +18,8 @@ function Menu({ smallDisplay, addToCart }) {
   };
 
   return (
-    <div className="menu-container">
-      <div className={`flex ${smallDisplay && "flex-col center-items"}`}>
+    <main id="menu">
+      <div className={smallDisplay ? "flex-col center-items" : "flex"}>
         {MenuData.map((item) => {
           return (
             <MenuItem
@@ -39,8 +39,8 @@ function Menu({ smallDisplay, addToCart }) {
           addToCart={addToCart}
         />
       )}
-    </div>
+    </main>
   );
-}
+};
 
 export default Menu;

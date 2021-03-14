@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import OmomoLogo from "../../images/omomo-logo-blk.svg";
-import { MenuLinkData } from "../LinkData.js";
-import "../../../node_modules/font-awesome/css/font-awesome.min.css";
-import "./Navbar.css";
 
-function Navbar({ smallDisplay }) {
+import OmomoLogo from "../../images/omomo-logo-blk.svg";
+import { MenuLinkData } from "../Links.js";
+
+import "./style.css";
+
+const Navbar = ({ smallDisplay }) => {
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => {
@@ -13,24 +14,24 @@ function Navbar({ smallDisplay }) {
   };
 
   return smallDisplay ? (
-    <>
+    <header>
       <div className="navbar flex">
-        <div className="nav-logo-container">
+        <div className="nav-logo">
           <Link to="/">
             <img src={OmomoLogo} alt="Omomo Tea Shoppe Logo" />
           </Link>
         </div>
-        <div className="menu-icon-container flex center-items">
+        <div className="menu-icon flex center-items">
           <i
-            className="fa fa-bars menu-icon"
+            className="fa fa-bars"
             onClick={showSidebar}
             style={{ fontSize: "50px" }}
           ></i>
         </div>
       </div>
-      <nav className={sidebar ? "nav-menu active flex" : "nav-menu flex"}>
-        <ul className="nav-menu-links comm-text">
-          <li className="nav-menu-toggle">
+      <nav className={`nav-menu flex ${sidebar && "active"}`}>
+        <ul className="comm-text">
+          <li id="nav-menu-toggle">
             <i
               className="fa fa-times"
               onClick={showSidebar}
@@ -41,18 +42,18 @@ function Navbar({ smallDisplay }) {
             return (
               <li className="nav-menu-link" key={index}>
                 <Link to={item.path} onClick={showSidebar} style={item.style}>
-                  <p className="nav-menu-text">{item.title}</p>
+                  <p>{item.title}</p>
                 </Link>
               </li>
             );
           })}
         </ul>
       </nav>
-    </>
+    </header>
   ) : (
-    <>
+    <header>
       <nav className="navbar flex">
-        <div className="nav-logo-container">
+        <div className="nav-logo">
           <Link to="/">
             <img src={OmomoLogo} alt="Omomo Tea Shoppe Logo" />
           </Link>
@@ -64,7 +65,7 @@ function Navbar({ smallDisplay }) {
           <Link to="/menu" className="link center-items link-brown flex">
             <li>Menu</li>
           </Link>
-          <div className="cart flex center-items">
+          <div id="cart-link" className="flex center-items">
             <Link to="/cart">
               <li>
                 <i
@@ -76,8 +77,8 @@ function Navbar({ smallDisplay }) {
           </div>
         </ul>
       </nav>
-    </>
+    </header>
   );
-}
+};
 
 export default Navbar;

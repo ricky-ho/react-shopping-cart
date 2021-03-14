@@ -1,6 +1,7 @@
 import React from "react";
+import "./style.css";
 
-function MenuItem({ smallDisplay, item, toggleModal, handleClick }) {
+const MenuItem = ({ smallDisplay, item, toggleModal, handleClick }) => {
   return (
     <div
       className={`menu-item flex-col ${
@@ -21,6 +22,6 @@ function MenuItem({ smallDisplay, item, toggleModal, handleClick }) {
       </div>
     </div>
   );
-}
+};
 
 export default MenuItem;
